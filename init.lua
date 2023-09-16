@@ -1,0 +1,5 @@
+require('core.defaults')
+require('core.lazy')
+require("lazy").setup("plugins")
+require('core.plugin_options')
+require('veil').setup()
