@@ -19,7 +19,7 @@ return {
 
 
   {
-  'willothy/veil.nvim',
+  'echasnovski/mini.starter',
   lazy = true,
   dependencies = {
     -- All optional, only required for the default setup.
@@ -28,18 +28,6 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
   },
-  -- or configure with:
-  -- opts = { ... }
-  },
-
-  {  "Shatur/neovim-ayu",
-    init = function ()
-      vim.api.nvim_set_hl(0,'Visual',{fg= '#FFB454' })
-      vim.api.nvim_set_hl(0,'Normal',{fg= '#59C2FF' })
-    end,
-    config = function()
-      require('ayu').colorscheme()
-    end,
   },
 
   {
@@ -55,6 +43,13 @@ return {
     end,
   },
 
+ {"marko-cerovac/material.nvim",
+    config = function ()
+  vim.cmd 'colorscheme material'
+    end,
+  },
+
+
  
   {
     "nvim-lualine/lualine.nvim", 
@@ -68,6 +63,5 @@ return {
     end,
   },
 
-
-
+ 
 }
